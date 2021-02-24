@@ -1,13 +1,1 @@
 theme: jekyll-theme-leap-day
-
-~ $ git clone https://github.com/AriesTropixDev/rscc-2021.github.io
-
-~ $ cd rscc-2021.github.io
-
-~ $ echo "HTML" > index.html
-
-~ $ git add --all
-
-~ $ git commit -m "Initial commit"
-
-~ $ git push -u origin main
