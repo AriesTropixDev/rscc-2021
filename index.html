@@ -2,6 +2,11 @@
 <head>
 <title>RSCC - 2021 Coronavirus Campaign</title>
 <link rel="icon" href="https://media.discordapp.net/attachments/814132731423359049/814216539620245534/kisspng-bulldog-pit-bull-clip-art-mascot-non-sporting-grou-cartoon-pictures-of-bulldogs-7-5-x-386-ca.png" type="image/x-icon">
+meta charset="utf-8" />
+    <title>How to make a comment box in HTML</title>
+    <link rel="stylesheet" type="text/css" href="smart-forms.css">
+    <link href="bluetheme.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
 body {
@@ -98,35 +103,74 @@ height: 25px;
 
 </center>
 <center>
-<div class="comment">
-<textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea>
-<input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
-</div>
-<div id="display"></div>
-<script type="text/javascript">
-var titles = [];
-var titleInput = document.getElementById("title");
-var messageBox = document.getElementById("display");
-function Allow()
-{
-if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
-{
-user.title.value="";
-alert("Please Enter only alphabets");
-}
-window.location.reload()
-}
-function insert () {
-titles.push(titleInput.value);
-clearAndShow();
-}
-function clearAndShow ()
-{
-titleInput.value = "";
-messageBox.innerHTML = "";
-messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
-}
-</script>
+
+    <div class="smart-wrap">
+        <div class="smart-forms smart-container wrap-3">
+            <div class="form-header header-blue">
+                <h4><i class="fa fa-comments"></i> Please comment </h4>
+            </div><!-- end .form-header section -->
+            <form method="post" action="/" id="comment2">
+                <div class="form-body theme-blue">
+                    <div class="section">
+                        <label class="field prepend-icon">
+                            <input type="text" name="names" id="names" class="gui-input" placeholder="Enter name...">
+                            <span class="field-icon"><i class="fa fa-user"></i></span>
+                        </label>
+                    </div><!-- end section -->
+                    <div class="section">
+                        <label class="field prepend-icon">
+                            <input type="email" name="email" id="email" class="gui-input" placeholder="Enter Email...">
+                            <span class="field-icon"><i class="fa fa-envelope"></i></span>
+                        </label>
+                    </div><!-- end section -->
+                    <div class="section">
+                        <label class="field prepend-icon">
+                            <input type="url" name="website" id="website" class="gui-input" placeholder="Website url (optional)...">
+                            <span class="field-icon"><i class="fa fa-globe"></i></span>
+                        </label>
+                    </div><!-- end section -->
+                    <div class="section">
+                        <label class="field prepend-icon">
+                            <textarea class="gui-textarea" id="comment" name="comment" placeholder="Enter message..."></textarea>
+                            <span class="field-icon"><i class="fa fa-comments"></i></span>
+                            <span class="input-hint">
+                                <strong>USE HTML TAGS:</strong>
+                                &lt;blockquote&gt;, &lt;strong&gt;&lt;a&gt;, &lt;b&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;code&gt;
+                            </span>
+                        </label>
+                    </div><!-- end section -->
+                    <div class="section">
+                        <label class="option option-blue">
+                            <input type="checkbox" name="check1">
+                            <span class="checkbox"></span> Notify me with comment updates
+                        </label>
+                    </div><!-- end section -->
+                    <div class="spacer-b30">
+                        <div class="tagline"><span>Just a moment </span></div><!-- .tagline -->
+                    </div>
+                    <div class="section">
+                        <span class="rating block">
+                            <span class="lbl-text">Rate this article</span>
+                            <input class="rating-input" id="five-stars" type="radio" name="article-rate">
+                            <label class="rating-star" for="five-stars"><i class="fa fa-star"></i></label>
+                            <input class="rating-input" id="four-stars" type="radio" name="article-rate">
+                            <label class="rating-star" for="four-stars"><i class="fa fa-star"></i></label>
+                            <input class="rating-input" id="three-stars" type="radio" name="article-rate" checked>
+                            <label class="rating-star" for="three-stars"><i class="fa fa-star"></i></label>
+                            <input class="rating-input" id="two-stars" type="radio" name="article-rate">
+                            <label class="rating-star" for="two-stars"><i class="fa fa-star"></i></label>
+                            <input class="rating-input" id="one-star" type="radio" name="article-rate">
+                            <label class="rating-star" for="one-star"><i class="fa fa-star"></i></label>
+                        </span>
+                    </div><!-- end  section -->
+                </div><!-- end .form-body section -->
+                <div class="form-footer">
+                    <button type="submit" class="button btn-blue">Post Comment</button>
+                </div><!-- end .form-footer section -->
+            </form>
+        </div><!-- end .smart-forms section -->
+    </div><!-- end .smart-wrap section -->
+    <div></div><!-- end section -->
   </center>
 <center>
 <h1 class="about-title";>About Us</h1>
